@@ -156,13 +156,10 @@ Examples covered:
 
 ## Tools used
 
-* SQL Server
 * SQL Server Management Studio
-* AdventureWorks2022
-* GitHub
+* AdventureWorks2022 sample database
+  
 
 ## Project status
 
-This repository is part of my SQL portfolio and is being developed gradually.
-
-Most sections already contain completed SQL exercises. The functions and temporary tables section is still in progress and will be expanded later.
+This repository may be expanded with additional SQL examples over time.
