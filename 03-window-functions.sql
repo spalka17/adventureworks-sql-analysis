@@ -14,7 +14,6 @@ INNER JOIN Production.ProductCategory pc
     ON pc.ProductCategoryID = ps.ProductCategoryID
 WHERE p.ListPrice > 0;
 
-
 -- Task 2: Running total by customer 
 -- Goal: Calculate a running total of order values for each customer.
 SELECT   
@@ -24,7 +23,6 @@ SELECT
     , TotalDue
     , SUM(TotalDue) OVER (PARTITION BY CustomerID ORDER BY OrderDate, SalesOrderID) AS RunningTotalDue
 FROM Sales.SalesOrderHeader;
-
 
 -- Task 3: Order numbering by customer
 -- Goal: Assign an order number to each customer order based on order date.
@@ -49,7 +47,6 @@ INNER JOIN Production.ProductSubcategory ps
 INNER JOIN Production.ProductCategory pc 
     ON pc.ProductCategoryID = ps.ProductCategoryID
 WHERE p.ListPrice > 0;
-
 
 -- Task 5: Price difference from maximum subcategory price
 -- Goal: Show each product with its price and the difference from the highest price in the same subcategory.
