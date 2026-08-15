@@ -9,7 +9,6 @@ GROUP BY
 ORDER BY
     SalesYear;
 
-
 -- Task 2: Top 20 best-selling products
 -- Goal: Display the 20 most frequently sold products by total quantity sold.
 SELECT TOP 20
