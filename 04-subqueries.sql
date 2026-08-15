@@ -1,6 +1,5 @@
 -- Task 1: Products with at least one order
 -- Goal: Find all products that have been ordered at least once.
-
 SELECT 
     p.ProductID
     , p.Name AS ProductName
@@ -13,7 +12,6 @@ WHERE EXISTS (
 
 -- Task 2: Customers with no orders
 -- Goal: Find customers who have never placed an order.
-
 SELECT 
     c.CustomerID
 FROM Sales.Customer c
@@ -43,7 +41,6 @@ ORDER BY sales.TotalSalesValue DESC;
 
 -- Task 4: Products above average subcategory price
 -- Goal: Find products that are more expensive than the average price in their subcategory.
-
 SELECT
     p1.ProductID
     , p1.Name AS ProductName
@@ -59,7 +56,6 @@ AND p1.ListPrice > 0;
 
 -- Task 5: Customer last order and order count
 -- Goal: For each customer, display the latest order ID and total number of orders.
-
 SELECT 
     c.CustomerID
     , (SELECT MAX(soh.SalesOrderID)
