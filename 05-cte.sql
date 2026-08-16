@@ -37,10 +37,9 @@ WITH SalespersonYearSales AS (
     INNER JOIN Person.Person p
         ON p.BusinessEntityID = sp.BusinessEntityID
     GROUP BY
-        sp.BusinessEntityID
-        , p.FirstName
-        , p.LastName
-        , YEAR(soh.OrderDate)
+       sp.BusinessEntityID
+       , p.FirstName + ' ' + p.LastName
+       , YEAR(soh.OrderDate)
 )
 
 SELECT 
